@@ -1,0 +1,51 @@
+{
+  "muscle_gain": {
+    "beginner": {
+      "plan": [
+        "Breakfast: Oats + milk + banana",
+        "Lunch: Rice + chicken + vegetables",
+        "Snack: Peanut butter sandwich",
+        "Dinner: Eggs + chapati",
+        "Protein target: ~1.6g per kg bodyweight"
+      ]
+    },
+    "intermediate": {
+      "plan": [
+        "Breakfast: Oats + whey + fruits",
+        "Meal 2: Boiled eggs + nuts",
+        "Lunch: Brown rice + chicken/fish + vegetables",
+        "Snack: Curd + fruits",
+        "Dinner: Paneer or lean meat + chapati",
+        "Protein target: ~1.8g per kg bodyweight"
+      ]
+    },
+    "advanced": {
+      "plan": [
+        "Breakfast: Oats + whey + nuts + berries",
+        "Meal 2: Egg whites + whole eggs + fruits",
+        "Lunch: Brown rice or quinoa + chicken/fish + vegetables",
+        "Pre-workout: Black coffee + banana",
+        "Post-workout: Whey isolate + fast carbs",
+        "Dinner: Lean meat or paneer + greens",
+        "Before bed: Greek yogurt or casein",
+        "Protein target: ~2.0–2.2g per kg bodyweight"
+      ]
+    }
+  },
+  "cutting": {
+    "plan": [
+      "High protein, calorie deficit diet",
+      "Lean meat, egg whites, vegetables",
+      "Low carbs, no sugar, no fried food",
+      "Protein target: ~2.2g per kg bodyweight"
+    ]
+  },
+  "bulking": {
+    "plan": [
+      "Calorie surplus with clean foods",
+      "Oats, rice, potatoes, lean protein",
+      "Avoid junk bulking",
+      "Protein target: ~1.8–2.0g per kg bodyweight"
+    ]
+  }
+}

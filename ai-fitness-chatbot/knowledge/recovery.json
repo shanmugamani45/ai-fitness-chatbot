@@ -1,0 +1,62 @@
+{
+  "general": {
+    "plan": [
+      "Sleep 7–9 hours",
+      "Drink sufficient water",
+      "Light stretching",
+      "Balanced protein intake"
+    ]
+  },
+
+  "legs": {
+    "plan": [
+      "Foam roll quads, hamstrings, calves",
+      "Cold or contrast shower",
+      "Light cycling or walking",
+      "Avoid heavy squats for 48 hours"
+    ]
+  },
+
+  "chest": {
+    "plan": [
+      "Doorway chest stretch",
+      "Light push-ups for blood flow",
+      "Avoid max bench next day",
+      "Focus on shoulder mobility"
+    ]
+  },
+
+  "back": {
+    "plan": [
+      "Dead hang for 30–60 seconds",
+      "Cat–cow stretches",
+      "Avoid heavy deadlifts next day"
+    ]
+  },
+
+  "shoulders": {
+    "plan": [
+      "Band pull-aparts",
+      "External rotation exercises",
+      "Ice if soreness is sharp"
+    ]
+  },
+
+  "rest_day": {
+    "plan": [
+      "Active recovery walk",
+      "Mobility drills",
+      "Hydration focus",
+      "Mental recovery"
+    ]
+  },
+
+  "doms": {
+    "plan": [
+      "Light movement (do NOT rest completely)",
+      "Warm shower",
+      "Magnesium-rich foods",
+      "Avoid ego lifting"
+    ]
+  }
+}

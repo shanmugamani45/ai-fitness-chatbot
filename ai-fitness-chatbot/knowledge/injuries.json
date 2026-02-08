@@ -1,0 +1,26 @@
+{
+  "knee": {
+    "advice": [
+      "Stop high-impact exercises",
+      "Apply ice for 15–20 minutes",
+      "Avoid deep squats temporarily",
+      "Consult physiotherapist if pain persists"
+    ]
+  },
+  "shoulder": {
+    "advice": [
+      "Avoid overhead presses",
+      "Do rotator cuff exercises",
+      "Use ice after workout",
+      "Maintain proper warm-up"
+    ]
+  },
+  "back": {
+    "advice": [
+      "Avoid heavy deadlifts",
+      "Focus on core strengthening",
+      "Maintain neutral spine",
+      "Seek medical help if pain increases"
+    ]
+  }
+}
