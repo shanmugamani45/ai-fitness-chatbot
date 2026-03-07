@@ -1,13 +1,17 @@
 # Python
-.venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.venv/
 
-# Node
-node_modules/
-
-# Env files
+# environment variables
 .env
 
-# OS
+# node
+node_modules/
+dist/
+
+# system
 .DS_Store
+Thumbs.db

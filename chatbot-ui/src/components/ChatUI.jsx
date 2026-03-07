@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import ReactMarkdown from "react-markdown";
 import logo from "../assets/logo.png";
 
 function generateId() {
@@ -35,6 +36,30 @@ export default function ChatUI() {
   const [loading, setLoading] = useState(false);
 
   const bottomRef = useRef(null);
+
+
+  function typeMessage(fullText, setMessages) {
+  let index = 0;
+
+  const interval = setInterval(() => {
+    index++;
+
+    setMessages((prev) => {
+      const updated = [...prev];
+
+      updated[updated.length - 1] = {
+        role: "bot",
+        text: fullText.slice(0, index)
+      };
+
+      return updated;
+    });
+
+    if (index >= fullText.length) {
+      clearInterval(interval);
+    }
+  }, 15);
+}
 
   // sync messages
   useEffect(() => {
@@ -93,7 +118,7 @@ export default function ChatUI() {
     setLoading(true);
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/chat`, {
+      const res = await fetch("http://127.0.0.1:8000/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userText }),
@@ -109,8 +134,9 @@ export default function ChatUI() {
 
       updateMessages([
         ...newMsgs,
-        { role: "bot", text: botText },
+        { role: "bot", text: "" },
       ]);
+      typeMessage(botText, setMessages);
     } catch {
       updateMessages([
         ...newMsgs,
@@ -303,9 +329,7 @@ export default function ChatUI() {
         <div className="chat-body">
           {messages.map((m, i) => (
             <div key={i} className={`chat-message ${m.role}`}>
-              {m.text.split("\n").map((l, idx) => (
-                <div key={idx}>{l}</div>
-              ))}
+              <ReactMarkdown>{m.text}</ReactMarkdown>
             </div>
           ))}
 

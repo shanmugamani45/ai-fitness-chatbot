@@ -1,5 +1,13 @@
 import json
+import os
 from pathlib import Path
+from dotenv import load_dotenv
+from services.gemini_api import ask_gemini
+
+# -----------------------------
+# ENV + GEMINI SETUP
+# -----------------------------
+load_dotenv()
 
 # -----------------------------
 # PATH SETUP (SAFE)
@@ -71,7 +79,6 @@ def extract_diet_request(message: str):
 # -----------------------------
 # RECOVERY REASONING
 # -----------------------------
-
 def extract_recovery_context(message: str):
     msg = message.lower()
 
@@ -92,9 +99,8 @@ def extract_recovery_context(message: str):
 
 
 # -----------------------------
-#INJURY REASONING
+# INJURY REASONING
 # -----------------------------
-
 def detect_pain_severity(message: str):
     msg = message.lower()
 
@@ -108,8 +114,6 @@ def detect_pain_severity(message: str):
         return "mild"
 
     return "unknown"
-
-
 
 
 # -----------------------------
@@ -138,7 +142,6 @@ def chatbot_response(message: str):
 
         return {"reply": f"{category.title()} Diet:\n" + "\n".join(plan)}
 
-
     if intent == "recovery":
         key = extract_recovery_context(message)
 
@@ -149,7 +152,6 @@ def chatbot_response(message: str):
                     + "\n".join(plan)
         }
 
-    
     if intent == "injury":
         severity = detect_pain_severity(message)
 
@@ -188,5 +190,9 @@ def chatbot_response(message: str):
 
         return {"reply": "Describe pain level clearly (mild / severe / sharp)."}
 
+    # -----------------------------
+    # FALLBACK TO GEMINI
+    # -----------------------------
+    ai_reply = ask_gemini(message)
 
-    return {"reply": "Ask me about diet, recovery, or injuries."}
+    return {"reply": ai_reply}
